@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <name>Fix Missing Images</name>
+  <id>org.davidbrum.fix_missing_images</id>
+
+  <label appearance="header">Fix Missing Images</label>
+  <label>Recursively search directories and relink all broken image references at once.</label>
+  <separator/>
+
+  <param name="search_dir" type="path" mode="folder" gui-text="Search folder"
+         gui-description="Directory to search recursively for missing image files. If left empty, the SVG document folder is used."></param>
+
+  <param name="search_doc_dir" type="bool" gui-text="Also search SVG document folder recursively"
+         gui-description="Include the folder where the current SVG is saved in the recursive search.">true</param>
+
+  <param name="path_style" type="optiongroup" appearance="combo" gui-text="Relinked path style"
+         gui-description="How paths should be stored in the SVG. Relative is recommended for project portability.">
+    <option value="relative">Relative to SVG (recommended)</option>
+    <option value="absolute">Absolute path</option>
+  </param>
+
+  <param name="case_insensitive" type="bool" gui-text="Case-insensitive filename match"
+         gui-description="Match files even if capitalization differs (e.g., photo.jpg vs PHOTO.JPG).">true</param>
+
+  <param name="embed_found" type="bool" gui-text="Embed found images as Base64 data"
+         gui-description="Embed image files directly inside the SVG so they can never be lost again.">false</param>
+
+  <param name="relink_all" type="bool" gui-text="Relink all images (even if already found)"
+         gui-description="Update paths for all images to point to the new location, not just broken ones.">false</param>
+
+  <param name="dry_run" type="bool" gui-text="Dry run (preview results without saving changes)"
+         gui-description="Simulate the search and show a detailed report without altering the SVG.">false</param>
+
+  <param name="selected_only" type="bool" gui-text="Process only selected image objects"
+         gui-description="Only check and relink images currently selected on the canvas.">false</param>
+
+  <effect needs-live-preview="false">
+    <object-type>all</object-type>
+    <effects-menu>
+      <submenu name="Images"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command location="inx" interpreter="python">fix_missing_images.py</command>
+  </script>
+</inkscape-extension>
