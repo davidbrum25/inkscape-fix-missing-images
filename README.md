@@ -4,7 +4,7 @@ An Inkscape extension that automatically finds and relinks missing or moved imag
 
 When SVG files are moved, renamed, or transferred to another computer, linked images break and Inkscape displays a "Linked Image Not Found" placeholder. This extension scans your document, recursively indexes your asset folders in a single fast pass, and relinks every broken image at once.
 
-![An Inkscape canvas showing missing image placeholders with broken links](media/001_missingfiles.png)
+![An Inkscape canvas showing missing image placeholders with broken links](media/001_missingfiles.webp)
 
 ## Install
 
@@ -26,13 +26,19 @@ On Windows the extensions folder is `%APPDATA%\inkscape\extensions`.
 2. Open **Extensions → Images → Fix Missing Images**.
 3. Select your asset folder in **Search folder** (or leave it blank to search recursively in the SVG document folder), set your preferences, and click **Apply**.
 
-![The extension in the Extensions, Images menu](media/003_menuoptions.png)
+![The extension in the Extensions, Images menu](media/003_menuoptions.webp)
 
-![The Fix Missing Images dialog: search folder, path style, matching options, and embedding toggle](media/002_popup.png)
+![The Fix Missing Images dialog: search folder, path style, matching options, and embedding toggle](media/002_popup.webp)
 
-![Summary dialog reporting verified, relinked, and unresolved images](media/004_feedbackmenu.png)
+![Summary dialog reporting verified, relinked, and unresolved images](media/004_feedbackmenu.webp)
 
-![The canvas restored with all images relinked and visible](media/005_success.png)
+![The canvas restored with all images relinked and visible](media/005_success.webp)
+
+A short screen recording of the whole flow:
+
+![Screen recording of a relink from start to finish](media/screen_sample.gif)
+
+The same recording as a smaller video file: [screen_sample.webm](media/screen_sample.webm).
 
 ## Options
 

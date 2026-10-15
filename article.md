@@ -6,11 +6,11 @@ Link: https://github.com/davidbrum25/inkscape-fix-missing-images
 
 Screenshots to attach, in this order, from the `media` folder:
 
-1. `001_missingfiles.png` — an Inkscape canvas with missing image placeholders and broken links.
-2. `003_menuoptions.png` — menu open at Extensions → Images → Fix Missing Images.
-3. `002_popup.png` — the extension dialog with options.
-4. `004_feedbackmenu.png` — the report dialog showing relinked files.
-5. `005_success.png` — the restored document with all images loaded and visible.
+1. `001_missingfiles.webp` — an Inkscape canvas with missing image placeholders and broken links.
+2. `003_menuoptions.webp` — menu open at Extensions → Images → Fix Missing Images.
+3. `002_popup.webp` — the extension dialog with options.
+4. `004_feedbackmenu.webp` — the report dialog showing relinked files.
+5. `005_success.webp` — the restored document with all images loaded and visible.
 
 ## TLDR, step by step
 
